@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+img{
+    height: 400px;
+    width: 400px;
+    border-radius:50%;
+    animation:animate 1045s linear infinite; 
+   // box-shadow: 0px 0px 10px 6px black;
+    top: 10px;
+    position: relative;
+    border: none;
+    left: 500px;
+}button{
+  position:relative;
+  left: 30px;
+  top: 100px;
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 5px 5px black;
+  margin: 0px 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.336);
+  color: white;
+  animation: animates 5s linear infinite;
+}button:hover{
+  background-color:teal;
+  cursor: pointer;
+}
+@keyframes animates {
+  0%{
+    color:rgb(231, 20, 20);
+    background-color: chocolate;
+  }40%{
+    color: rgb(165, 13, 235);
+    background-color: blue;
+  }60%{
+    color: rgb(9, 17, 122);
+    background-color: teal;
+}100%{
+  color: rgb(255, 0, 234);
+}
+  
+}  
+
+
+@keyframes animate{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+    </style>
+</head>
+<body>
+ <img src="C:\Users\UtkarshTiwari\Downloads\fan-removebg-preview.png" alt="" id="fan"/>
+    <button type="button" value="1" onclick="show(this)">Start</button>
+    <button type="button" value="2"onclick="show(this)">Low</button>
+    <button type="button" value="3" onclick="show(this)">Medium</button>
+    <button type="button" value="4" onclick="show(this)">Fast</button>
+    <button type="button" value="5" onclick="show(this)">Stop</button>
+
+    <script>
+t=document.getElementById("fan");
+ function show(obj){
+if(obj.value==1){
+ t.style.animationDuration="4s";  
+ console.log(obj.value);  
+ }
+  else if(obj.value==2){
+    t.style.animationDuration="1s";
+    console.log(obj.value);
+  }
+  else if(obj.value==3){
+    t.style.animationDuration="0.5s";
+    console.log(obj.value);
+  }
+  else if(obj.value==4){
+    t.style.animationDuration="0.1s";
+    console.log(obj.value);
+  }
+  else if(obj.value==5){
+    t.style.animationDuration="100000000s ";
+  }
+ }
+    </script>
+</body>
+</html>
